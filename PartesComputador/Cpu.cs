@@ -164,14 +164,15 @@ namespace PartesComputador
 
         public bool CompararCpu(Cpu cpuComparar)
         {
-            bool comparacion = false;
+            //bool comparacion = false;
 
-            if (this.MotherBoard == cpuComparar.MotherBoard && this.Procesador == cpuComparar.Procesador && this.Ram == cpuComparar.Ram && this.PlacaAudio == cpuComparar.PlacaAudio && this.PlacaRed == cpuComparar.PlacaRed)
-            {
-                comparacion = true;
-            }
+            //if (this.MotherBoard == cpuComparar.MotherBoard && this.Procesador == cpuComparar.Procesador && this.Ram == cpuComparar.Ram && this.PlacaAudio == cpuComparar.PlacaAudio && this.PlacaRed == cpuComparar.PlacaRed)
+            //{
+            //    comparacion = true;
+            //}
 
-            return comparacion;
+            //return comparacion;
+            return CompararEstatico(this, cpuComparar);
         }
 
     }
