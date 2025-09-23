@@ -10,8 +10,11 @@ namespace EnsambladorPc
             Console.WriteLine(gamaBaja1.MostrarCpu());
             Cpu gamaBaja2 = new Cpu("A520", 8, "Ryzen 3 3200g", "Realtek", "Realtek");
             Console.WriteLine(gamaBaja1.MostrarCpu());
-
+            Console.WriteLine("Funcion comparar estatica.");
             Console.WriteLine(Cpu.CompararEstatico(gamaBaja1,gamaBaja2));
+            Console.WriteLine("Función comparar de instancia.");
+            Console.WriteLine(gamaBaja1.CompararCpu(gamaBaja2));
+            
 
             Cpu cpu1 = new Cpu();
             Console.WriteLine(cpu1.MostrarCpu());
