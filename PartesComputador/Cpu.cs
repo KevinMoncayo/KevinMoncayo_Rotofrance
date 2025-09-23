@@ -151,28 +151,29 @@ namespace PartesComputador
 
         //Debido a las caracteristicas propias de las comparaciones de objetos, para comparar una Cpu con otra lo mejor es crear un método para ello.
         public static bool CompararEstatico(Cpu cpu1, Cpu cpu2)
-        { 
-            bool comparacion = false;
-
-            if(cpu1.MotherBoard == cpu2.MotherBoard && cpu1.Procesador == cpu2.Procesador && cpu1.Ram == cpu2.Ram && cpu1.PlacaAudio == cpu2.PlacaAudio && cpu1.PlacaRed == cpu2.PlacaRed)
-            { 
-                comparacion = true;
-            }
-
-            return comparacion;
-        }
-
-        public bool CompararCpu(Cpu cpuComparar)
         {
             //bool comparacion = false;
 
-            //if (this.MotherBoard == cpuComparar.MotherBoard && this.Procesador == cpuComparar.Procesador && this.Ram == cpuComparar.Ram && this.PlacaAudio == cpuComparar.PlacaAudio && this.PlacaRed == cpuComparar.PlacaRed)
-            //{
+            //if(cpu1.MotherBoard == cpu2.MotherBoard && cpu1.Procesador == cpu2.Procesador && cpu1.Ram == cpu2.Ram && cpu1.PlacaAudio == cpu2.PlacaAudio && cpu1.PlacaRed == cpu2.PlacaRed)
+            //{ 
             //    comparacion = true;
             //}
 
             //return comparacion;
-            return CompararEstatico(this, cpuComparar);
+            return cpu1.CompararCpu(cpu2);
+        }
+
+        public bool CompararCpu(Cpu cpuComparar)
+        {
+            bool comparacion = false;
+
+            if (this.MotherBoard == cpuComparar.MotherBoard && this.Procesador == cpuComparar.Procesador && this.Ram == cpuComparar.Ram && this.PlacaAudio == cpuComparar.PlacaAudio && this.PlacaRed == cpuComparar.PlacaRed)
+            {
+                comparacion = true;
+            }
+
+            return comparacion;
+            //return CompararEstatico(this, cpuComparar);
         }
 
     }
