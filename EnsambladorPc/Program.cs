@@ -20,6 +20,15 @@ namespace EnsambladorPc
             Console.WriteLine(cpu1.MostrarCpu());
             Cpu cpu2 = new Cpu();
             Console.WriteLine(cpu2.MostrarCpu());
+
+            Console.Write("Ingrese la motherboard de la cpu1: ");
+            cpu1.MotherBoard = Console.ReadLine();
+            Console.WriteLine(cpu1.MotherBoard);
+
+            Console.WriteLine($"Benchmark gamaBaja1 {gamaBaja1.Benchmark}");
+
+            cpu1.SistemaRefrigeracion = "Refrigeración por aire";
+            Console.WriteLine($"El sistema de refrigeración de la CPU1 es {cpu1.SistemaRefrigeracion}");
         }
     }
 }

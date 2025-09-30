@@ -19,22 +19,23 @@ namespace PartesComputador
          * Placa base
          * Procesador
          * Memoria RAM
-         * Fuente de alimentación
-         * Disco duro/ SSD
-         * Tarjeta gráfica(si no esta integrada)
-         * Sistema de refrigeración
+         * Fuente de alimentación -> int -> W
+         * Disco duro/ SSD -> int -> GB
+         * Tarjeta gráfica(si no esta integrada) -> int -> GB
+         * Sistema de refrigeración -> string
          * Gabinete
          */
 
-        private string MotherBoard;
-        private int Ram; //Cantidad de memoria en Gb.
-        private string Procesador;
-        private string PlacaAudio;
-        private string PlacaRed;
+        private string motherBoard;
+        private int ram; //Cantidad de memoria en Gb.
+        private string procesador;
+        private string placaAudio;
+        private string placaRed;
+        //private string sistemaRefrigeracion; //Va a desaparecer por propiedad autoreferenciada
 
         //Atributo estatico
         private static string gabinete;// Clase -> Estatico
-        public static int cantidadCpuArmadas;
+        private static int cantidadCpuArmadas;
 
         //Creo un constructor estatico para inicializar los parámetros estaticos la primera vez que entro a la clase
         static Cpu()
@@ -49,67 +50,101 @@ namespace PartesComputador
         }
 
         //Al implementar el :this() estoy implementando una forma de llamar al constructor sin parámetros para que haga un incremento a la variable CantidadCpuArmadas
-        public Cpu(string motherBoard, int ram, string procesador, string placaAudio, string placaRed):this()
+        public Cpu(string motherBoard, int ram, string procesador, string placaAudio, string placaRed) : this()
         {
-            this.MotherBoard = motherBoard;
-            this.Ram = ram;
-            this.Procesador = procesador;
-            this.PlacaAudio = placaAudio;
-            this.PlacaRed = placaRed;
+            this.motherBoard = motherBoard;
+            this.ram = ram;
+            this.procesador = procesador;
+            this.placaAudio = placaAudio;
+            this.placaRed = placaRed;
         }
 
-        #region Getters
-        public string GetMotherBoard()
+        #region Properties
+        //Creación de propiedad Motherboard, la reglas es que se llame igual que el atributo y que empiece con Mayúscula.
+        public string MotherBoard
         {
-            return this.MotherBoard;
+            get {
+                return this.motherBoard;
+            }
+            set {
+                if (value != string.Empty)
+                {
+                    this.motherBoard = value;
+                }
+                
+            }
         }
 
-        public int GetRam()
-        {
-            return this.Ram;
-        }
-        public string GetProcesador()
-        {
-            return this.Procesador;
-        }
+        //Si una propiedad solamente tiene GET, seria una propiedad solo de lectura.
+        //Las propiedades no reciben parámetros...
 
-        public string GetPlacaAudio()
+        public int Ram
         {
-            return this.PlacaAudio;
-        }
-
-        public string GetPlacaRed()
-        {
-            return this.PlacaRed;
-        }
-        #endregion
-
-        #region Setters
-
-        public void SetMotherBoard(string motherboard)
-        {
-
-            this.MotherBoard = motherboard;
+            get {
+                return this.ram;
+            }
+            set
+            {
+                if (value > 4 && value < 256)
+                {
+                    this.ram = value;
+                }
+            }
         }
 
-        public void SetRam(int ram)
+        public string Procesador
         {
-            this.Ram = ram;
+            get
+            {
+                return this.procesador;
+            }
+            set
+            {
+                this.procesador = value;
+            }
         }
 
-        public void SetProcesador(string procesador)
+        public string PlacaAudio
         {
-            this.Procesador = procesador;
+            get
+            {
+                return this.placaAudio;
+            }
+            set
+            {
+                this.placaAudio = value;
+            }
         }
 
-        public void SetPlacaAudio(string placaAudio)
+        public string PlacaRed
         {
-            this.PlacaAudio = placaAudio;
+            get
+            {
+                return this.placaRed;
+            }
+            set
+            {
+                this.placaRed = value;
+            }
         }
 
-        public void SetPlacaRed(string placaRed)
+        public int Benchmark
         {
-            this.PlacaRed = placaRed;
+            get
+            {
+                return this.HacerBenchmark();
+            }
+        }
+
+        /*Ejemplo de propiedad "autorreferenciada"
+         * No esta referida a ningún atributo.
+         * Puede tener un get y/o set sin implementar.
+         * El dato no se almacena en ningún atributo, sino directamente en una propiedad...
+         */
+        public string SistemaRefrigeracion
+        {
+            get;
+            set;
         }
         #endregion
 
@@ -118,17 +153,17 @@ namespace PartesComputador
         public string MostrarCpu()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Placa base: "+ this.MotherBoard);
-            sb.AppendLine("RAM: "+this.Ram+" GB");
-            sb.AppendLine("Procesador: " + this.Procesador);
-            sb.AppendLine("Placa de audio: "+this.PlacaAudio);
-            sb.AppendLine("Placa de red: " + this.PlacaRed);
+            sb.AppendLine("Placa base: " + this.motherBoard);
+            sb.AppendLine("RAM: " + this.ram + " GB");
+            sb.AppendLine("Procesador: " + this.procesador);
+            sb.AppendLine("Placa de audio: " + this.placaAudio);
+            sb.AppendLine("Placa de red: " + this.placaRed);
             sb.AppendLine("Gabinete: " + gabinete);
-            sb.AppendLine("Cantidad de CPU creadas: "+cantidadCpuArmadas);
+            sb.AppendLine("Cantidad de CPU creadas: " + cantidadCpuArmadas);
             return sb.ToString();
         }
 
-        public int HacerBenchmark()
+        private int HacerBenchmark()
         {
             int limite = 100;
             int benchmark;

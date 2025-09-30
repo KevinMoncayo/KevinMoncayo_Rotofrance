@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartesComputador", "PartesC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnsambladorPc", "EnsambladorPc\EnsambladorPc.csproj", "{EF814835-4C87-4ABA-A052-83826A756156}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorSensoresAmbientales", "MonitorSensoresAmbientales\MonitorSensoresAmbientales.csproj", "{24F1129E-8F38-49E8-8DB8-D9CAB289E3DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EF814835-4C87-4ABA-A052-83826A756156}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF814835-4C87-4ABA-A052-83826A756156}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF814835-4C87-4ABA-A052-83826A756156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24F1129E-8F38-49E8-8DB8-D9CAB289E3DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24F1129E-8F38-49E8-8DB8-D9CAB289E3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24F1129E-8F38-49E8-8DB8-D9CAB289E3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24F1129E-8F38-49E8-8DB8-D9CAB289E3DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
