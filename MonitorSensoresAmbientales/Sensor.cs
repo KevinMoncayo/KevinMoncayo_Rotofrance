@@ -9,6 +9,7 @@ namespace MonitorSensoresAmbientales
         private string nombre;
         private string unidad;
         private double valorActual;
+        private List<double> lecturasSensor = new List<double>();
 
         private static int cantidadSensores;
 
@@ -38,7 +39,7 @@ namespace MonitorSensoresAmbientales
 
         public string Nombre
         {
-            get
+            get//Se llama descriptor
             {
                 return this.nombre;
             }
@@ -106,6 +107,18 @@ namespace MonitorSensoresAmbientales
             }
         }
 
+        public List<double> LecturasSensor
+        {
+            get
+            { 
+                return this.lecturasSensor;
+            }
+            set
+            {
+                this.lecturasSensor.Add(value);
+            }
+        }
+
         #endregion
 
         #region Metodos
@@ -166,6 +179,10 @@ namespace MonitorSensoresAmbientales
             return validar;
         }
 
+        public List<double> ObtenerHistorial()
+        {
+            return 
+        }
 
 
         #endregion

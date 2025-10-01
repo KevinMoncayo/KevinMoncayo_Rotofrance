@@ -16,7 +16,10 @@ namespace ConsolaMonitorSensoresAmbientales
             Console.WriteLine(LM35.Datasheet());
             Console.WriteLine(SensorCalidadAire.Datasheet());
 
+            SensorCalidadAire.Nombre = "MQ135";
+            SensorCalidadAire.Unidad = "ppm";
 
+            Console.WriteLine($"EL sensor {SensorCalidadAire.Nombre} ha sido actualizado!");
         }
     }
 }
