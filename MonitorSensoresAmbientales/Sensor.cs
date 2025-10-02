@@ -9,7 +9,7 @@ namespace MonitorSensoresAmbientales
         private string nombre;
         private string unidad;
         private double valorActual;
-        private List<double> lecturasSensor = new List<double>();
+        private List<double> lecturasSensor;
 
         private static int cantidadSensores;
 
@@ -25,6 +25,7 @@ namespace MonitorSensoresAmbientales
         public Sensor()
         {
             cantidadSensores++;
+            this.lecturasSensor = new List<double>();//Este es el lugar adecuado para inicializar la lista.
         }
 
         public Sensor(string nombre, string unidad) : this()
@@ -107,17 +108,23 @@ namespace MonitorSensoresAmbientales
             }
         }
 
-        public List<double> LecturasSensor
+        public double LecturasSensor
         {
-            get
-            { 
-                return this.lecturasSensor;
-            }
             set
             {
                 this.lecturasSensor.Add(value);
             }
         }
+
+        /* Quise hacer una sobrecarga de propiedades...
+        public List<double> LecturasSensor
+        {
+            get
+            {
+                return this.lecturasSensor;
+            }
+        }
+        */
 
         #endregion
 
@@ -179,9 +186,13 @@ namespace MonitorSensoresAmbientales
             return validar;
         }
 
+        /// <summary>
+        /// Retorna el historial de medidas del sensor en una lista, para ser mostrado en la consola
+        /// </summary>
+        /// <returns>Una lista con el historial de medidas del sensor.</returns>
         public List<double> ObtenerHistorial()
         {
-            return 
+            return this.lecturasSensor;
         }
 
 
