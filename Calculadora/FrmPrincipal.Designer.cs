@@ -97,7 +97,7 @@
             btnRestar.TabIndex = 5;
             btnRestar.Text = "-";
             btnRestar.UseVisualStyleBackColor = true;
-            btnRestar.Click += this.btnRestar_Click;
+            btnRestar.Click += btnRestar_Click;
             // 
             // btnMultiplocar
             // 
@@ -108,6 +108,7 @@
             btnMultiplocar.TabIndex = 6;
             btnMultiplocar.Text = "x";
             btnMultiplocar.UseVisualStyleBackColor = true;
+            btnMultiplocar.Click += btnMultiplocar_Click;
             // 
             // btnDividir
             // 
@@ -118,6 +119,7 @@
             btnDividir.TabIndex = 7;
             btnDividir.Text = "/";
             btnDividir.UseVisualStyleBackColor = true;
+            btnDividir.Click += btnDividir_Click;
             // 
             // lblResultado
             // 
