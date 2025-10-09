@@ -17,5 +17,15 @@ namespace Calculadora
             this.lblResultado.Text = suma.ToString();
         }
 
+        private void btnRestar_Click(object render, EventArgs e)
+        {
+            string valorNumero1 = this.txtPrimerOperando.Text;
+            string valorNumero2 = this.txtSegundoOperando.Text;
+
+            double resta = int.Parse(valorNumero1) - int.Parse(valorNumero2);
+
+            this.lblResultado.Text = resta.ToString();
+        }
+
     }
 }

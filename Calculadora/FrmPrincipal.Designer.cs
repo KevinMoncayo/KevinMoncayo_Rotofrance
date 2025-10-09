@@ -86,7 +86,7 @@
             btnSuma.TabIndex = 4;
             btnSuma.Text = "+";
             btnSuma.UseVisualStyleBackColor = true;
-            btnSuma.Click += this.btnSuma_Click;
+            btnSuma.Click += btnSuma_Click;
             // 
             // btnRestar
             // 
@@ -97,6 +97,7 @@
             btnRestar.TabIndex = 5;
             btnRestar.Text = "-";
             btnRestar.UseVisualStyleBackColor = true;
+            btnRestar.Click += this.btnRestar_Click;
             // 
             // btnMultiplocar
             // 
