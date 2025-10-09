@@ -138,7 +138,7 @@ namespace MonitorSensoresAmbientales
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"El nombre de este sensor es: {this.nombre}");
-            sb.AppendLine($"La unidad que mide este sensor es: {this.nombre}");
+            sb.AppendLine($"La unidad que mide este sensor es: {this.unidad}");
             sb.AppendLine($"El valor actual de este sensor es: {this.valorActual} {this.unidad}");
             return sb.ToString();
         }
