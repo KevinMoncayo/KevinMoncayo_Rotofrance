@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartesComputador", "PartesC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnsambladorPc", "EnsambladorPc\EnsambladorPc.csproj", "{EF814835-4C87-4ABA-A052-83826A756156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorSensoresAmbientales", "MonitorSensoresAmbientales\MonitorSensoresAmbientales.csproj", "{24F1129E-8F38-49E8-8DB8-D9CAB289E3DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonitorSensoresAmbientales", "MonitorSensoresAmbientales\MonitorSensoresAmbientales.csproj", "{24F1129E-8F38-49E8-8DB8-D9CAB289E3DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolaMonitorSensoresAmbientales", "ConsolaMonitorSensoresAmbientales\ConsolaMonitorSensoresAmbientales.csproj", "{78F11FF0-A19D-480C-8A45-C184EDF6E533}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolaMonitorSensoresAmbientales", "ConsolaMonitorSensoresAmbientales\ConsolaMonitorSensoresAmbientales.csproj", "{78F11FF0-A19D-480C-8A45-C184EDF6E533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\Calculadora.csproj", "{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{78F11FF0-A19D-480C-8A45-C184EDF6E533}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78F11FF0-A19D-480C-8A45-C184EDF6E533}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78F11FF0-A19D-480C-8A45-C184EDF6E533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
