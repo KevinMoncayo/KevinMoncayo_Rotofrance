@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonitorSensoresAmbientales"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolaMonitorSensoresAmbientales", "ConsolaMonitorSensoresAmbientales\ConsolaMonitorSensoresAmbientales.csproj", "{78F11FF0-A19D-480C-8A45-C184EDF6E533}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\Calculadora.csproj", "{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculadora", "Calculadora\Calculadora.csproj", "{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoMonopolio", "BancoMonopolio\BancoMonopolio.csproj", "{2C58CE5F-259E-4CD3-AD34-E252C5A0FA75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD98B8F2-9407-4FD7-90CF-FBC9A3513667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C58CE5F-259E-4CD3-AD34-E252C5A0FA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C58CE5F-259E-4CD3-AD34-E252C5A0FA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C58CE5F-259E-4CD3-AD34-E252C5A0FA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C58CE5F-259E-4CD3-AD34-E252C5A0FA75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
